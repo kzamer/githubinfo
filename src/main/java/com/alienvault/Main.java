@@ -26,6 +26,8 @@ import org.kohsuke.github.GitHub;
  */
 public class Main {
 
+    final static String GITHUBUSER = "myusername";
+    final static String GITHUBTOKEN = "myoauthtoken";
     /**
      * @param args String array with Github repositories with the format
      * "owner/repository"
@@ -63,7 +65,7 @@ public class Main {
     // @TODO: Of course move this to GithubRunner or similar class outside of Main
     public static String callRESTv3(final String[] repoOwnerList) {
         try {
-            GitHub github = GitHub.connect("kzamer", "5d50e3c4977ebc5e747df4d07a02efb711c16af8"); 
+            GitHub github = GitHub.connect(GITHUBUSER, GITHUBTOKEN); 
             List<GithubIssue> allIssues = new ArrayList<>();
             Map<String, Integer> dayIssuesMap = new HashMap<>();
 
