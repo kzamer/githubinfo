@@ -1,11 +1,8 @@
 package com.alienvault;
 
-import lombok.Getter;
-import lombok.Setter;
-
 public class RepoIssueCount {
-    @Getter @Setter private String repo;
-    @Getter @Setter private int issueCount;
+    private String repo;
+    private int issueCount;
 
     public RepoIssueCount(String repo, int issueCount) {
         this.repo = repo;
